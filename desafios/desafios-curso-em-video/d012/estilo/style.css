@@ -55,6 +55,7 @@ section.imagem {
 section.imagem > p {
     width: 300px;
     background-color: rgba(0, 0, 0, 0.288);
+    padding-left: 5px;
 }
 
 footer {
