@@ -6,41 +6,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Rollovers & Sprites</title>
     <style>
-        a.button {
-            width: 200px;
-            background-image: linear-gradient(to left, lightgray, lightgray);
-            display: block;
-            text-align: center;
+        body {
+            margin: 0 auto;
             padding: 10px;
-            margin: 5px auto;
-            border: 1px solid rgba(128, 128, 128, 0.3);
-            border-radius: 20px;
-            text-decoration: none;
-            color: rgb(80, 80, 80);
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;
+        }
+
+        .image {
+            display: inline-block;
+            position: relative;
+            width: 350px;
+            height: 350px;
+            margin: 10px;
+        }
+
+        .image__img {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .image__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.25s;
+        }
+
+        .image__overlay--blur {
+            backdrop-filter: blur(1px);
+        }
+
+        .image__overlay > * {
+            transform: translateY(20px);
+            transition: transform 0.25s;
+        }
+
+        .image__overlay:hover {
+            opacity: 1;
+        }
+
+        .image__overlay:hover > * {
+            transform: translateY(0);
+        }
+
+        .image__title {
+            font-size: 2em;
             font-weight: bold;
-            text-transform: uppercase;
         }
 
-        a#add-to-basket:hover {
-            color: green;
+        .image__description {
+            font-size: 1.25em;
+            margin-top: 0.25em;
         }
 
-        a#framing-options:hover {
-            color: green;
-        }
-
-        #add-to-basket:active {
-            background-image: linear-gradient(to left, rgba(0, 128, 0, 0.3), rgba(0, 128, 0, 0.3));
-        }
-
-        #framing-options:active {
-            background-image: linear-gradient(to left, rgba(0, 128, 0, 0.3), rgba(0, 128, 0, 0.3));
-        }
     </style>
 </head>
 <body>
-    <a href="#" class="button" id="add-to-basket">Add to basket &plus;</a>
-    <a href="#" class="button" id="framing-options">Framing options</a>
+        <div class="image">
+            <img class="image__img" src="images/Academia2.jpeg" alt="gym">
+            <div class="image__overlay image__overlay--blur">
+                <div class="image__title">GYM</div>
+                <p class="image__description">
+                    Here we have a GYM
+                </p>
+            </div>
+        </div>
+        <div class="image">
+            <img class="image__img" src="images/SetupPc.png" alt="setup">
+            <div class="image__overlay image__overlay--blur">
+                <div class="image__title">Setup</div>
+                <p class="image__description">
+                    Here we have a setup
+                </p>
+            </div>
+        </div>
+        <div class="image">
+            <img class="image__img" src="images/cat_image.jpg" alt="gato no escritorio">
+            <div class="image__overlay image__overlay--blur">
+                <div class="image__title">Cat</div>
+                <p class="image__description">
+                    Here we have a cat
+                </p>
+            </div>
+        </div>
 </body>
 </html>
