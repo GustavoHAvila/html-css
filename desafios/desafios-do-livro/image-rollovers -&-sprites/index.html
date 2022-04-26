@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Rollovers & Sprites</title>
+    <style>
+        a.button {
+            width: 200px;
+            background-image: linear-gradient(to left, lightgray, lightgray);
+            display: block;
+            text-align: center;
+            padding: 10px;
+            margin: 5px auto;
+            border: 1px solid rgba(128, 128, 128, 0.3);
+            border-radius: 20px;
+            text-decoration: none;
+            color: rgb(80, 80, 80);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        a#add-to-basket:hover {
+            color: green;
+        }
+
+        a#framing-options:hover {
+            color: green;
+        }
+
+        #add-to-basket:active {
+            background-image: linear-gradient(to left, rgba(0, 128, 0, 0.3), rgba(0, 128, 0, 0.3));
+        }
+
+        #framing-options:active {
+            background-image: linear-gradient(to left, rgba(0, 128, 0, 0.3), rgba(0, 128, 0, 0.3));
+        }
+    </style>
+</head>
+<body>
+    <a href="#" class="button" id="add-to-basket">Add to basket &plus;</a>
+    <a href="#" class="button" id="framing-options">Framing options</a>
+</body>
+</html>
