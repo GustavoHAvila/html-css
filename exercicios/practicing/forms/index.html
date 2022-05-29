@@ -4,21 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Form</title>
 </head>
 <body>
     <form action="">
+        <h1>Form</h1>
         <label for="uname"></label>
-        <input type="text" id="uname" name="uname" placeholder="Nome:">
-        <br>
+        <input class="box" type="text" id="uname" name="uname" placeholder="Name:"><br>
         <label for="ulastname"></label>
-        <input type="text" id="ulastname" name="ulastname" placeholder="Last Name:">
-        <br>
+        <input class="box" type="text" id="ulastname" name="ulastname" placeholder="Last Name:"><br>
         <label for="uemail"></label>
-        <input type="email" name="uemail" id="uemail" placeholder="E-mail:">
-        <br>
+        <input class="box" type="email" name="uemail" id="uemail" placeholder="E-mail:"><br>
         <label for="upassword"></label>
-        <input type="password" name="upassword" id="upassword" placeholder="Senha:">
+        <input class="box" type="password" name="upassword" id="upassword" placeholder="Senha:"><br>
+        <div class="align-left">
+            <input type="radio" name="role" id="student">
+            <label for="student">Student</label>
+            <input type="radio" name="role" id="teacher">
+            <label for="teacher">Teacher</label><br>
+            <input type="checkbox" id="terms" name="terms" value="Terms">
+            <label for="terms">I read and I agree with the <a href="#">terms.</a></label><br>
+        </div>
+        <div class="align-right">
+            <input type="submit" value="Create Account">
+        </div>
     </form>
 </body>
 </html>
